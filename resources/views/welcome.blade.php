@@ -17,15 +17,15 @@
 <body>
     <div id="app">
         <b-navbar toggleable="lg" type="dark" variant="info">
-            <b-navbar-brand href="{{ url("/") }}">Home</b-navbar-brand>
+            <b-navbar-brand active href="{{ url("/") }}">Home</b-navbar-brand>
 
             <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
             <b-collapse id="nav-collapse" is-nav>
                 <b-navbar-nav>
 {{--                    <b-nav-item v-b-modal.modal-add>Adicionar</b-nav-item>--}}
+                    <b-nav-item href="{{ url("/other") }}">Other</b-nav-item>
                     <b-nav-item v-b-modal.modal-add>New task</b-nav-item>
-                    <b-nav-item href="#" disabled>Disabled</b-nav-item>
                 </b-navbar-nav>
 
                 <!-- Right aligned nav items -->

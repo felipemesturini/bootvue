@@ -35,7 +35,7 @@
 <script>
 export default {
     name: "TaskModalComponent",
-    props: ['task']
+    props: ['description', 'notes', 'finished']
 }
 </script>
 

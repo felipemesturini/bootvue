@@ -58,6 +58,7 @@
                 </b-form-checkbox>
             </b-container>
         </b-modal>
+
     </div>
 </template>
 
