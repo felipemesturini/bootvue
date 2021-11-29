@@ -13,6 +13,7 @@ Vue.use(Vuex);
 Vue.use(VueResource);
 
 Vue.component('task-table-component', require('./components/TaskTableComponent').default);
+Vue.component('form-cadastro-component', require('./components/FormCadastroComponent').default);
 // let comp = require('./components/TaskTableComponent').default;
 // console.log(comp);
 

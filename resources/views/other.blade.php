@@ -47,55 +47,10 @@
         </b-navbar>
 
         <main class="py-4">
-            <b-container fluid="md" class="container">
-                <b-row>
-                    <b-col>
-                        <b-form-group
-                            id="group-description"
-                            description="Informe a descrição."
-                            label="Desrição"
-                            label-for="description"
-                        >
-                            <b-form-input id="description" trim></b-form-input>
-                        </b-form-group>
-                    </b-col>
-                </b-row>
+            <b-container class=".container">
+                <form-cadastro-component />
             </b-container>
         </main>
-
-        <b-modal
-            id="modal-add"
-            title="Add Item"
-            ok-title="Aplicar"
-            @ok="addItem"
-        >
-            <b-container fluid>
-                <b-form-group
-                    id="group-description"
-                    description="Informe a descrição."
-                    label="Desrição"
-                    label-for="description"
-                    v-model="description"
-                >
-                    <b-form-input id="description" v-model="description"
-                                  trim></b-form-input>
-                </b-form-group>
-                <b-form-group
-                    id="group-notes"
-                    description="Observações."
-                    label="Notas de lembrete"
-                    label-for="notes"
-                    v-model="notes"
-                >
-                    <b-form-textarea id="notes" v-model="notes" trim></b-form-textarea>
-                </b-form-group>
-                <b-form-checkbox v-model="finished" name="finished" switch>
-{{--                    <b>Status {{ finished }}</b>--}}
-                    <b>Concluída</b>
-                </b-form-checkbox>
-            </b-container>
-        </b-modal>
-
     </div>
 </body>
 </html>
