@@ -54,13 +54,12 @@
             </b-row>
             <b-row>
                 <b-col>
-                    <b-button v-on:click="showAbout" title="Detalhes">About</b-button>
+                    <b-button v-on:click="showAbout" title="Detalhes">{{ aboutCaption }}</b-button>
                 </b-col>
             </b-row>
-
-
         </b-form>
-        <task-modal-component :content="content" ></task-modal-component>
+        <task-modal-component @modalClicked="eventClick" :content="content"
+        ></task-modal-component>
     </div>
 </template>
 
@@ -85,7 +84,10 @@ export default {
         },
         showAbout() {
             this.$bvModal.show('modal-about');
-            console.log('showAbout')
+        },
+        eventClick(arg1) {
+            alert('Evento emitido pelo componente filho ' +  arg1);
+            this.aboutCaption = arg1;
         }
     }
     , data() {
@@ -94,6 +96,7 @@ export default {
             nome: null,
             sexo: null,
             telefone: null,
+            aboutCaption: 'About',
             sexos: [
                 {text: "Selecione", value: null},
                 "Masculino",

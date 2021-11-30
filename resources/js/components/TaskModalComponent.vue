@@ -2,6 +2,7 @@
     <b-modal
         id="modal-about"
         title="Detalhes"
+        @ok="okClicked"
     >
         <b-container fluid>
             <p>{{ content }}</p>
@@ -12,7 +13,12 @@
 <script>
 export default {
     name: "TaskModalComponent",
-    props: ['content']
+    props: ['content'],
+    methods: {
+        okClicked() {
+            this.$emit('modalClicked', 'Alteracao');
+        }
+    }
 }
 </script>
 
